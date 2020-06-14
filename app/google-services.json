@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "322690277393",
+    "firebase_url": "https://fire-base-sample-1d4f1.firebaseio.com",
+    "project_id": "fire-base-sample-1d4f1",
+    "storage_bucket": "fire-base-sample-1d4f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322690277393:android:f59f8a2d76a20cc81411b0",
+        "android_client_info": {
+          "package_name": "com.oliva.verde.android.firestoresample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322690277393-i8famtbite4ascc5ae69r0299kjqa3vp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAArRNhOdhqj1IdbRPii-9P87Mjb9CpHtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "322690277393-i8famtbite4ascc5ae69r0299kjqa3vp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
