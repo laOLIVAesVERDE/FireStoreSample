@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FireStoreSample</string>
+    <string name="bt_title">SAVE</string>
 </resources>
