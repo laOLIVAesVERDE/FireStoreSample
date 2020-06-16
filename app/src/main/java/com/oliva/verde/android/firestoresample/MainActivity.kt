@@ -7,7 +7,10 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.EventListener
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreException
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -22,6 +25,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        // 第一引数にコンテキストを指定し、Activityがストップしたらリスナをdetachする
+        mDocRef.addSnapshotListener(this@MainActivity, object : EventListener<DocumentSnapshot> {
+            override fun onEvent(p0: DocumentSnapshot?, p1: FirebaseFirestoreException?) {
+                Log.d("FireStoreSample", "Successed to get quote from Documemt.")
+                // it : DocumentSnapshotオブジェクト
+                // DocumentReferenceから得られるスナップショットで、単一のドキュメントのデータを保持している
+                val quote = p0?.get(_quoteKey).toString()
+                val author = p0?.get(_authorKey).toString()
+                val tvQuote = findViewById<TextView>(R.id.tvTextQuote)
+                val tvAuthor = findViewById<TextView>(R.id.tvTextAuthor)
+                tvQuote.text = quote
+                tvAuthor.text = author
+            }
+        })
     }
 
     fun onSaveButtonClick(view : View?) {
