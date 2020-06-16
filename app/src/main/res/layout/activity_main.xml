@@ -21,7 +21,28 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/bt_title"
+        android:text="@string/bt_save"
         android:onClick="onSaveButtonClick"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_fetch"
+        android:onClick="onFetchButtonClick"/>
+
+    <TextView
+        android:id="@+id/tvTextQuote"
+        android:text="@string/tv_quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tvTextAuthor"
+        android:text="@string/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

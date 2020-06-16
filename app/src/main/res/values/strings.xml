@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">FireStoreSample</string>
-    <string name="bt_title">SAVE</string>
+    <string name="bt_save">SAVE</string>
+    <string name="bt_fetch">FETCH</string>
+    <string name="tv_quote">Quote will be shown here.</string>
+    <string name="tv_author">Author will be shown here.</string>
 </resources>
