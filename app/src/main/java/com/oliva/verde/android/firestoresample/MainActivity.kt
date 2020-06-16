@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        mDocRef.addSnapshotListener(object : EventListener<DocumentSnapshot> {
+        // 第一引数にコンテキストを指定し、Activityがストップしたらリスナをdetachする
+        mDocRef.addSnapshotListener(this@MainActivity, object : EventListener<DocumentSnapshot> {
             override fun onEvent(p0: DocumentSnapshot?, p1: FirebaseFirestoreException?) {
                 Log.d("FireStoreSample", "Successed to get quote from Documemt.")
                 // it : DocumentSnapshotオブジェクト
